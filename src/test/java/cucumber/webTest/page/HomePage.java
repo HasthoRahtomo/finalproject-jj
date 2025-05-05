@@ -89,4 +89,27 @@ public class HomePage extends AuthenticationElements{
     wait.until(ExpectedConditions.elementToBeClickable(productImage));
         driver.findElement(productImage).click();
     }
+
+    public void clickContactInTheNavBar(){
+        driver.findElement(contactBtn).click();
+    }
+
+    public void inputContactEmail(String email){
+        wait.until(ExpectedConditions.elementToBeClickable(contactEmailInput));
+        driver.findElement(contactEmailInput).sendKeys(email);
+    }
+
+    public void inputContactName(String name){
+        wait.until(ExpectedConditions.elementToBeClickable(contactNameInput));
+        driver.findElement(contactNameInput).sendKeys(name);
+    }
+
+    public void inputContactMessage(String message){
+        wait.until(ExpectedConditions.elementToBeClickable(contactMessageInput));
+        driver.findElement(contactMessageInput).sendKeys(message);
+    }
+
+    public void clickSendMessageBtn(){
+        driver.findElement(sendMessageBtn).click();
+    }
 }

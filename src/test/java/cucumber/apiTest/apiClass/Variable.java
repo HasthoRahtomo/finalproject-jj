@@ -1,6 +1,6 @@
 package cucumber.apiTest.apiClass;
 
-public class variable {
+public class Variable {
     public String url = "";
     public String apiUrl = "";
     public String page = "";

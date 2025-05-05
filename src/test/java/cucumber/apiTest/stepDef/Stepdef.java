@@ -1,12 +1,12 @@
 package cucumber.apiTest.stepDef;
 import io.cucumber.java.en.*;
-import cucumber.apiTest.apiClass.setVariable;
-import cucumber.apiTest.apiClass.expectedVerification;
+import cucumber.apiTest.apiClass.SetVariable;
+import cucumber.apiTest.apiClass.ExpectedVerification;
 import java.util.Random;
 
-public class stepdef {
-    setVariable apiTask = new setVariable();
-    expectedVerification verification = new expectedVerification(apiTask);
+public class Stepdef {
+    SetVariable apiTask = new SetVariable();
+    ExpectedVerification verification = new ExpectedVerification(apiTask);
 
     String pageValue;
     String limitValue;

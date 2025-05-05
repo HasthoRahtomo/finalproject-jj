@@ -12,7 +12,6 @@ import io.cucumber.java.en.When;
 public class PaymentStepDef extends BaseText {
     HomePage homePage;
     ProdDetailPage prodDetailPage;
-    CommonPage commonPage;
     PaymentPage paymentPage;
 
     @And("user click an item menu")

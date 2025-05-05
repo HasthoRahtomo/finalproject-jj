@@ -4,10 +4,10 @@ import org.json.JSONObject;
 
 import java.util.EmptyStackException;
 
-public class expectedVerification extends setVariable {
-    private final setVariable apiTaskSet;
+public class ExpectedVerification extends SetVariable {
+    private final SetVariable apiTaskSet;
 
-    public expectedVerification(setVariable apiTask) {
+    public ExpectedVerification(SetVariable apiTask) {
         apiTaskSet = apiTask;
     }
 

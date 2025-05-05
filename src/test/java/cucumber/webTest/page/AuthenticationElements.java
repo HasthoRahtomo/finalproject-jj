@@ -15,6 +15,11 @@ public class AuthenticationElements {
     By usernameInputSign = By.xpath("//*[@id=\"sign-username\"]");
     By passwordInputSign = By.xpath("//*[@id=\"sign-password\"]");
     By productImage = By.xpath("//*[@id=\"tbodyid\"]/div[1]/div/a");
+    By contactBtn = By.xpath("//*[@id=\"navbarExample\"]/ul/li[2]/a");
+    By contactEmailInput = By.xpath("//*[@id=\"recipient-email\"]");
+    By contactNameInput = By.xpath("//*[@id=\"recipient-name\"]");
+    By contactMessageInput = By.xpath("//*[@id=\"message-text\"]");
+    By sendMessageBtn = By.xpath("//*[@id=\"exampleModal\"]/div/div/div[3]/button[2]");
 
     // product page
     By addToCart = By.xpath("//*[@id=\"tbodyid\"]/div[2]/div/a");

@@ -1,6 +1,6 @@
 package cucumber.apiTest.apiClass;
 
-public class setVariable extends variable {
+public class SetVariable extends Variable {
 
     public void setURL(String urlLinkValue){
         url = urlLinkValue;
