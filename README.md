@@ -40,7 +40,8 @@ Other file:
 ## Where is the report result?
 
 The report result can be found after executing the program, you can follow one of this step:
-- write "./gradlew cucumber-api"" on terminal
+- write "./gradlew cucumber-api" on terminal OR
+- write "./gradlew cucumber-web" on terminal
 - execute the CucumberRun class at 'src/test/java/cucumber/CucumberRun'
 - execute the gherkin feature file
 
