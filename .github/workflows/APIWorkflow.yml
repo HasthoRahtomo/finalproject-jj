@@ -51,7 +51,7 @@ jobs:
       with:
         PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         PUBLISH_DIR: reports
-        DESTINATION_DIR: api
+        DESTINATION_DIR: report
         
           
 

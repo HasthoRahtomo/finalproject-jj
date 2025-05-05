@@ -45,7 +45,7 @@ The report result can be found after executing the program, you can follow one o
 - execute the CucumberRun class at 'src/test/java/cucumber/CucumberRun'
 - execute the gherkin feature file
 
-The report will appear in the "report" folder. The reports contain .html and .json files
+The report will appear in the "/report/" folder. The reports contain .html and .json files
 
 
 ## Setup and Configuration
