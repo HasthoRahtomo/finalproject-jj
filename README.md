@@ -1,4 +1,4 @@
-## Dependencies and notes
+## Notes And Information About This Project
 Note:
 
 make sure "Cucumber for java" and "Gherkin" plugin are downloaded and activated by click ctrl + alt + s and then click the "plugins" menu (if you're using inteliJ) or by adding the maven script at gradle.build file
@@ -55,3 +55,64 @@ The report will appear in the "report" folder. The reports contain .html and .js
 - Type "./gradlew cucumber-web" in terminal to run for UI test
 - You can use '-Ptags="@api"' to enable tag. For example './gradlew cucumber-api -Ptags="@api"'
 
+
+## .Feature example
+
+@web @logout
+Feature: Logout
+
+  @positive
+  Scenario: Logout test after login
+    Given user in on the home page and already login
+    When user click logout button
+    Then there is no user's username on the top left, then the logout success
+
+
+## Step Definition exmaple
+
+package cucumber.webTest.stepDef.user;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import cucumber.webTest.page.HomePage;
+import cucumber.webTest.BaseText;
+
+public class LogoutStepDef extends BaseText {
+    HomePage homePage;
+
+    @When("user click logout button")
+    public void userClickLogoutButton() {
+        homePage = new HomePage(driver);
+        homePage.clickTheLogoutButton();
+    }
+
+    @Then("there is no user's username on the top left, then the logout success")
+    public void thereIsNoUserSUsernameOnTheTopLeftThenTheLogoutSuccess() {
+        homePage.logoutValidation();
+    }
+}
+
+
+## Page example
+
+package cucumber.webTest.page;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+
+public class ProdDetailPage extends AuthenticationElements{
+    WebDriver driver;
+    WebDriverWait wait;
+
+    public ProdDetailPage (WebDriver driver){
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+    }
+    public void clickAddToCartBtn(){
+        wait.until(ExpectedConditions.elementToBeClickable(addToCart));
+        driver.findElement(addToCart).click();
+    }
+}
